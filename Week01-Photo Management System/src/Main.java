@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,9 +40,20 @@ public class Main {
         //search by tag
         System.out.println(photoManager.search("family"));
 
-        // embty
+        // empty
         System.out.println(photoManager.search("Alex"));
 
+        //add photo three
+        Photo photo3=new Photo("mayar",location);
+        photoManager.addPhoto(photo3);
+
+
+        // search between 2 dates
+        System.out.println(PhotoManager.searchBtw2Date(LocalDate.parse("2025-04-18"),LocalDate.parse("2025-04-19")));
+
+
+        //searchByMultipleTags
+        System.out.println("multi tags"+ PhotoManager.searchByMultipleTags("family","holiday"));
 
 
 
@@ -56,19 +68,7 @@ public class Main {
 
 
 
-//        Photo photo2=new Photo("taghreed",location);
-//        Photo photo3=new Photo("mayar",location);
 
-//        photoManager.addPhoto(photo2);
-//        photoManager.addPhoto(photo3);
-//        photoManager.addPhoto(photo3);
-//        System.out.println(photoManager.search("ahmed"));
-//        System.out.println(photoManager.search("taghreed"));
-//        System.out.println(photoManager.search("mayar"));
-//        photoManager.addTag("holiday",photo1);
-       // photoManager.addTag("holiday",photo2);
-//        Photo p= (Photo) photoManager.search("holiday");
-    //    System.out.println(p.getName());
 
 
 
